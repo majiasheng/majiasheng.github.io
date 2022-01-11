@@ -71,18 +71,23 @@ function About(props) {
   })
 
   return (
-    <div className="About">
+    <div className="about">
 
       <Switch>
         <Route exact path={path}>
         <div className="intro">
-          <h3>Hello world</h3>
+          <h3>Hello World</h3>
           <hr />
           <p>
-            My name is Jia Sheng Ma /jah shane ma/. I go by Jia Sheng or Sheng.
+            My name is Jia Sheng.
             {/* <span role="img" aria-label="name-info">ℹ️</span> */}
           </p>
-          <p>I am a software engineer, and I solve problems.</p>
+          <p>
+          I solve problems.
+          <br/>
+          I am a software engineer,
+          and I consider myself an artist.
+          </p>
           <hr />
           <br />
         </div>

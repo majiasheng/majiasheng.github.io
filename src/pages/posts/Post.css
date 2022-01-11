@@ -1,3 +1,8 @@
 .post-content {
-    line-height: 12pt;
+  line-height: 12pt;
+}
+
+ul.posts-list li {
+  text-indent: -2em;
+  margin-left: 2em;
 }
