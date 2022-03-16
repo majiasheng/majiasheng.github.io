@@ -79,14 +79,13 @@ function About(props) {
           <h3>Hello World</h3>
           <hr />
           <p>
-            My name is Jia Sheng.
-            {/* <span role="img" aria-label="name-info">ℹ️</span> */}
+          I am Jia Sheng
           </p>
           <p>
-          I solve problems.
+          Software engineer
           <br/>
-          I am a software engineer,
-          and I consider myself an artist.
+          <br/>
+          and utilitarian artist
           </p>
           <hr />
           <br />
