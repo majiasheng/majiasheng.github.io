@@ -1,13 +1,15 @@
 import {
-  About, Art, Home, Posts, Work,
-} from './pages/v1';
+  Home,
+  About,
+//   Art,
+//   Posts,
+//   Work,
+} from './pages';
 
-export const routes = [
-  { path: '/gb/', name: 'Home', component: Home },
-  { path: '/gb/about', name: 'About', component: About },
-  { path: '/gb/art', name: 'Art', component: Art },
-  // {path: '/gb/work', name: 'Work', component: Work},
-  { path: '/gb/posts', name: 'Posts', component: Posts },
-];
-
-export const NUMBER_OF_ROUTES = routes.length;
+export default {
+  home: { path: '/', name: 'Home', component: Home },
+  about: { path: '/about', name: 'About', component: About },
+  // art: { path: '/art', name: 'Art', component: Art },
+  // posts: { path: '/posts', name: 'Posts', component: Posts },
+  // work: {path: '/work', name: 'Work', component: Work},
+};

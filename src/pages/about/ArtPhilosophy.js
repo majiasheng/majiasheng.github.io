@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
 function ArtPhilosophy() {
   return (
     <div className="ArtPhilosophy">
       <h3>Art/Design Philosophy</h3>
-      <hr/>
+      <hr />
       <ul className="philosophy">
         <li>
           <p>• Integrity</p>
