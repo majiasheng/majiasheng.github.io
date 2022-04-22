@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { NavBar, Console } from './pages';
+import { NavBar, Console } from './pages/v1';
 import './App.css';
 import { routes } from './routes';
 import reducer from './reducer';

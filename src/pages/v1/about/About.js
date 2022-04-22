@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 import sections from './sections';
 import { SELECTED_ITEM } from '../includes/cssClasses';
-import { ScreenContext } from '../../App';
+import { ScreenContext } from '../../../App';
 
 function About(props) {
   const { screenItems, dispatch } = React.useContext(ScreenContext);

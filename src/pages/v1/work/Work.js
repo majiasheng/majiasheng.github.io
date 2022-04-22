@@ -3,7 +3,7 @@ import projects from "./projects";
 import { Switch, Route, Link, withRouter } from "react-router-dom";
 import { SELECTED_ITEM } from "../includes/cssClasses";
 import WorkDisplay from "./WorkDisplay";
-import { ScreenContext } from "../../App";
+import { ScreenContext } from "../../../App";
 
 function Work(props) {
   const { screenItems, dispatch } = React.useContext(ScreenContext);

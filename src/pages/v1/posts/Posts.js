@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { Switch, Route, Link, withRouter } from "react-router-dom";
-import * as themes from "./themes";
+import * as posts from "./_posts";
 import { SELECTED_ITEM } from "../includes/cssClasses";
-import ArtDisplay from "./ArtDisplay";
-import { ScreenContext } from "../../App";
-import twbm from "./assets/twbm-vol1-ed1.pdf";
+import Post from "./Post";
+import { ScreenContext } from "../../../App";
 
-function Art(props) {
+// TODO: add keyword prop
+// TODO: add search
+function Posts(props) {
   const { screenItems, dispatch } = React.useContext(ScreenContext);
 
   /* reason for passing in index is to create closure */
@@ -21,12 +22,12 @@ function Art(props) {
   useEffect(() => {
     dispatch({
       type: "SET_NUM_OF_SELECTABLE_ITEMS",
-      numOfSelectableItems: Object.entries(themes).length,
+      numOfSelectableItems: Object.entries(posts).length,
     });
 
     dispatch({
       type: "SET_ROUTES_OF_SELECTABLE_ITEMS",
-      routesOfSelectableItems: Object.keys(themes).map(
+      routesOfSelectableItems: Object.keys(posts).map(
         (key) => `${props.match.path}/${key}`
       ),
     });
@@ -51,7 +52,7 @@ function Art(props) {
   let routesJSX = [];
 
   let index = 0;
-  Object.entries(themes).map(([key, value]) => {
+  Object.entries(posts).map(([key, value]) => {
     linksJSX.push(
       <li
         key={`link_${key}`}
@@ -60,12 +61,12 @@ function Art(props) {
         }`}
         onMouseEnter={handleMouseSelectItem(index)}
       >
-        <Link to={`${path}/${key}`}>• {key}</Link>
+        <Link to={`${path}/${key}`}>• {value.title.toLocaleUpperCase()}</Link>
       </li>
     );
     routesJSX.push(
       <Route path={`${path}/${key}`} key={`route_${key}`}>
-        <ArtDisplay artThemeName={key} artThemeValues={value} />
+        <Post title={value.title} date={value.date} content={value.content} />
       </Route>
     );
     index++;
@@ -78,23 +79,18 @@ function Art(props) {
   );
 
   return (
-    <div className="Art">
-      <h3>Art</h3>
-      is whatever you make of it
+    <div className="posts">
+      <h3>Posts <a href="/posts/html/index.html" title="Plain View">📄</a></h3>
       <hr />
-      <h4>Collections</h4>
       <Switch>
         <Route exact path={path}>
-          <ul className="inline-block art-collections">{linksJSX}</ul>
+          <ul className="inline-block posts-list">{linksJSX}</ul>
         </Route>
 
         {routesJSX}
       </Switch>
-      <hr/>
-      <h4>Volumes</h4>
-      <a href={twbm} target="_blank">• TWBM Vol.1</a>
     </div>
   );
 }
 
-export default withRouter(Art);
+export default withRouter(Posts);

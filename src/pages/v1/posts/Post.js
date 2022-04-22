@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ScreenContext } from "../../App";
+import { ScreenContext } from "../../../App";
 import "./Post.css";
 
 /**

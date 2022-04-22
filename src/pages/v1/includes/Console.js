@@ -1,7 +1,7 @@
 import React from "react";
-import { routes } from "../../routes";
+import { routes } from "../../../routes";
 import { withRouter } from "react-router-dom";
-import { ScreenContext } from "../../App";
+import { ScreenContext } from "../../../App";
 
 function Console(props) {
   const { screenItems, dispatch } = React.useContext(ScreenContext);

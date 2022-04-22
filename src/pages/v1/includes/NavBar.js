@@ -8,8 +8,8 @@ import {
   HIDDEN,
   SELECTED_ITEM
 } from './cssClasses';
-import { routes } from '../../routes';
-import { ScreenContext } from "../../App";
+import { routes } from '../../../routes';
+import { ScreenContext } from "../../../App";
 
 
 function NavBar(props) {

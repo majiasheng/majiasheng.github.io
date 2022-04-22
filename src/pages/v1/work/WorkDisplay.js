@@ -28,7 +28,7 @@ function WorkDisplay({ work }) {
         {work.thumbNail !== undefined && (
           <img
             className="project-image"
-            src={require(`../../images/projects/${work.thumbNail}`)}
+            src={require(`../../../images/projects/${work.thumbNail}`)}
             alt={work.name}
           />
         )}

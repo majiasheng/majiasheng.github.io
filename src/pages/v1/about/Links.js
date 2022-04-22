@@ -1,7 +1,7 @@
 import React from "react";
-import githubIcon from "../../images/icons/GitHub-Mark-32px.png";
-import linkedinIcon from "../../images/icons/LI-In-Bug.png";
-import MailIcon from "../../images/icons/Email-icon.png";
+import githubIcon from "../../../images/icons/GitHub-Mark-32px.png";
+import linkedinIcon from "../../../images/icons/LI-In-Bug.png";
+import MailIcon from "../../../images/icons/Email-icon.png";
 
 function Links() {
   return (

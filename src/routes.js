@@ -1,6 +1,6 @@
 import {
   About, Art, Home, Posts, Work,
-} from './pages';
+} from './pages/v1';
 
 export const routes = [
   { path: '/gb/', name: 'Home', component: Home },
