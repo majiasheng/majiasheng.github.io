@@ -4,10 +4,9 @@ import './About.css';
 function About() {
   return (
     <div className="about">
-      <div className="intro">
-        <h3>Hello World</h3>
-        I am Jia Sheng, software engineer and utilitarian artist
-      </div>
+      <div className="intro">I am Jia Sheng Ma, software engineer and utilitarian artist</div>
+      <div>This site is a repository for my works</div>
+      <div>Enjoy</div>
     </div>
   );
 }
