@@ -105,8 +105,8 @@
 
 /* anchor */
 a.anchor-hover-no-effect:hover {
-  text-decoration: none;
-  background-color: unset;
+  text-decoration: none important!;
+  background-color: black;
 }
 
 /* list */

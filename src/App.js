@@ -10,29 +10,19 @@ function App() {
     <div className="App">
 
       <Router>
-
-        <Switch>
-          <Route path="/">
-            <div className="navigation">
-              <NavigationBar />
-            </div>
-            <div className="content">
-              <Switch>
-                {Object.values(routes).map((r) => (
-                  <Route exact path={r.path} component={r.component} key={r.name} />
-                ))}
-                <Route path="*">
-                  <NotFound />
-                </Route>
-              </Switch>
-            </div>
-          </Route>
-
-          {/* <Route exact path="/">
-              new home
-            </Route> */}
-
-        </Switch>
+        <div className="navigation">
+          <NavigationBar />
+        </div>
+        <div className="content">
+          <Switch>
+            {Object.values(routes).map((r) => (
+              <Route exact={r.path === '/'} path={r.path} component={r.component} key={r.name} />
+            ))}
+            <Route path="*">
+              <NotFound />
+            </Route>
+          </Switch>
+        </div>
       </Router>
     </div>
   );

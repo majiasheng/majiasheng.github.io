@@ -1,31 +1,38 @@
 import React from 'react';
 import {
-  Switch, Route, Link, useLocation,
+  Switch, Route, Link,
 } from 'react-router-dom';
-import exhibitions from './exhibition-data/';
+import exhibitions from './exhibition-data';
 import Exhibition from './Exhibition';
+import ExhibitionThumbnail from './ExhibitionThumbnail';
 import twbm from './assets/twbm-vol1-ed1.pdf';
-function Exhibitions() {
-  const location = useLocation();
 
+const createPath = (name) => `/exhibitions/${name}`.toLocaleLowerCase();
+
+function Exhibitions() {
   return (
     <div className="exhibition">
-      <h3>Art is whatever you make of it </h3>
-      {/* <Switch> */}
-        {
-          exhibitions.map((e) => (
-            // TODO: show exhibition thumbnail
-            <Link to={`${location.pathname}/${e.name}`}>{e.name}</Link>
-          ))
-        }
-        {/* {
-          exhibitions.map((e) => (
-            <Route exact path={`${location.pathname}/${e}`}>
-            <Exhibition name={e} data/>
+      {/* <h3>Art is whatever you make of it </h3> */}
+
+      <Switch>
+        <Route exact path="/exhibitions">
+          TODO: show exhibition thumbnail
+          {
+            exhibitions.map((e) => (
+              <div key={`exhibition-link-${e.meta.name}`}>
+                <Link className="anchor-hover-no-effect" to={createPath(exhibitions[0].meta.name)}><ExhibitionThumbnail data={e} /></Link>
+              </div>
+            ))
+          }
+        </Route>
+
+        { exhibitions.map((e) => (
+          <Route exact path={createPath(e.meta.name)} key={`exhibition-route-${e.meta.name}`}>
+            <Exhibition data={e} />
           </Route>
-          ))
-        } */}
-      {/* </Switch> */}
+        ))}
+
+      </Switch>
       {/* <hr />
       <h4>Volumes</h4>
       <a href={twbm} target="_blank" rel="noreferrer">• TWBM Vol.1</a> */}

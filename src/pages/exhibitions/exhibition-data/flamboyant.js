@@ -1,8 +1,8 @@
 const flamboyant = [
   {
-    imageFileName: "lisa.jpg",
-    imageName: "lisa",
-    note: "flamboyant #1",
+    fileName: "lisa.jpg",
+    name: "lisa",
+    description: "flamboyant #1",
     date: "2017-12-01",
   },
 ];
