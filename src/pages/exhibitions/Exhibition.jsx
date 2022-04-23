@@ -1,7 +1,6 @@
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Exhibition.css';
 
 /**
  * data: {
@@ -17,7 +16,7 @@ import './Exhibition.css';
  *       date: '2017-12-01',
  *     }, ...
  *  ],
-}
+ * }
  */
 function Exhibition({ data }) {
   // <li key={`${artThemeName}_${artThemeValue.name}_${index}`}>

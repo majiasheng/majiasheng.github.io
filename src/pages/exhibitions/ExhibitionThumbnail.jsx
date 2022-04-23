@@ -17,27 +17,21 @@ import '../../styles/ExhibitionThumbnail.css';
  *       date: '2017-12-01',
  *     }, ...
  *  ],
-}
+ * }
  */
 function ExhibitionThumbnail({ data }) {
-  // <li key={`${artThemeName}_${artThemeValue.name}_${index}`}>
-  //   <img
-  //     className="art-image"
-  //     src={require(`../../../images/arts/${artThemeName}/${artThemeValue.fileName}`)}
-  //     alt={artThemeValue.name}
-  //   />
-  // </li>
-
   return (
     <div className="exhibition-thumb-nail">
       <div className="exhibition-thumb-nail-body">
         <img
           src={require(`./assets/exhibitions/${data.meta.name.toLowerCase()}/${data.showings[0].fileName}`)}
           alt={data.showings[0].name}
-          width={300}
-          height={300}
+          width={250}
         />
-        <h4 className="exhibition-name">{data.meta.name}</h4>
+        <div>
+          <h4 className="exhibition-name">{data.meta.name}</h4>
+          <div className="exhibition-description">{data.meta.about}</div>
+        </div>
       </div>
     </div>
   );

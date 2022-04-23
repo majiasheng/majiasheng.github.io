@@ -26,15 +26,7 @@ ul#nav-items li {
   display: inline;
 }
 
-/* anchors */
-a {
-  text-decoration: none;
-}
-a:link,
-a:visited {
-  color: inherit;
-}
-a:hover {
+.nav-item a:hover {
   color: white;
   background-color: black;
 }

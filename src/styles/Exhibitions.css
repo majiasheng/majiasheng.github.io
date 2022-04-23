@@ -1,3 +1,8 @@
+a:hover {
+  text-decoration: none !important;
+}
+
+/* old */
 .ArtDisplay {
   line-height: 1.6;
 }
