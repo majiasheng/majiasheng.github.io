@@ -12,16 +12,15 @@ const createPath = (name) => `/exhibitions/${name}`.toLocaleLowerCase();
 
 function Exhibitions() {
   return (
-    <div className="exhibition">
+    <div className="exhibitions">
       {/* <h3>Art is whatever you make of it </h3> */}
 
       <Switch>
         <Route exact path="/exhibitions">
-          TODO: show exhibition thumbnail
           {
             exhibitions.map((e) => (
               <div key={`exhibition-link-${e.meta.name}`}>
-                <Link className="anchor-hover-no-effect" to={createPath(exhibitions[0].meta.name)}><ExhibitionThumbnail data={e} /></Link>
+                <Link className="anchor-hover-no-effect" to={createPath(e.meta.name)}><ExhibitionThumbnail data={e} /></Link>
               </div>
             ))
           }

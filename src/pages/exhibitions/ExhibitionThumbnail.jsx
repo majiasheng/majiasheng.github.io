@@ -21,14 +21,15 @@ import '../../styles/ExhibitionThumbnail.css';
  */
 function ExhibitionThumbnail({ data }) {
   return (
-    <div className="exhibition-thumb-nail">
-      <div className="exhibition-thumb-nail-body">
+    <div className="exhibition-thumbnail">
+      <div className="exhibition-thumbnail-body">
         <img
+          className="exhibition-thumbnail-image"
           src={require(`./assets/exhibitions/${data.meta.name.toLowerCase()}/${data.showings[0].fileName}`)}
           alt={data.showings[0].name}
           width={250}
         />
-        <div>
+        <div className="exhibition-thumbnail-text">
           <h4 className="exhibition-name">{data.meta.name}</h4>
           <div className="exhibition-description">{data.meta.about}</div>
         </div>

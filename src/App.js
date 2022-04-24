@@ -13,7 +13,7 @@ function App() {
         <div className="navigation">
           <NavigationBar />
         </div>
-        <div className="content">
+        <div className="app-content">
           <Switch>
             {Object.values(routes).map((r) => (
               <Route exact={r.path === '/'} path={r.path} component={r.component} key={r.name} />

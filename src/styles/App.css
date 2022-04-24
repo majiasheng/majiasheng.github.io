@@ -6,17 +6,17 @@
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-.content::-webkit-scrollbar {
+.app-content::-webkit-scrollbar {
   display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
-.content {
+.app-content {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
 
-.content {
+.app-content {
   overflow: scroll;
 }
 
@@ -34,12 +34,12 @@
 
 /* .App {
   box-shadow: 5px 10px 8px #888888;
-  border-radius: 5px 5px 30px 5px; /* 'union' of .content's and .console's  
+  border-radius: 5px 5px 30px 5px; /* 'union' of .app-content's and .console's  
   margin: 3em 2em;
 } */
 
 /* 
-.content {
+.app-content {
   /* box-sizing: content-box; 
   z-index: 1;
 
@@ -54,7 +54,7 @@
 
 
 /* padding for contents on screen */
-/* .content > * {
+/* .app-content > * {
   padding: 1em;
 } */
 

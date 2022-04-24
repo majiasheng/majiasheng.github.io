@@ -2,6 +2,13 @@ a:hover {
   text-decoration: none !important;
 }
 
+.exhibitions {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 /* old */
 .ArtDisplay {
   line-height: 1.6;

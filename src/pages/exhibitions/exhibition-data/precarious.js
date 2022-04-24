@@ -1,6 +1,6 @@
 const precarious = {
   meta: {
-    name: 'Precarious',
+    name: 'precarious',
     about: 'Featuring beauty from precariousness',
   },
   showings: [
