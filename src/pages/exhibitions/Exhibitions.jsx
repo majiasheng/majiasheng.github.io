@@ -6,7 +6,7 @@ import exhibitions from './exhibition-data';
 import Exhibition from './Exhibition';
 import ExhibitionThumbnail from './ExhibitionThumbnail';
 import '../../styles/Exhibitions.css';
-import twbm from './assets/twbm-vol1-ed1.pdf';
+// import twbm from './assets/twbm-vol1-ed1.pdf';
 
 const createPath = (name) => `/exhibitions/${name}`.toLocaleLowerCase();
 

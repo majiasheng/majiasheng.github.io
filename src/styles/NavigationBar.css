@@ -26,11 +26,6 @@ ul#nav-items li {
   display: inline;
 }
 
-.nav-item a:hover {
-  color: white;
-  background-color: black;
-}
-
 /* 
 .menu {
   background-color: #eee;

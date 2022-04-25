@@ -1,4 +1,4 @@
-a:hover {
+.anchor-hover-no-effect:hover {
   text-decoration: none !important;
 }
 
@@ -7,32 +7,4 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 12px;
-}
-
-/* old */
-.ArtDisplay {
-  line-height: 1.6;
-}
-
-.art-display-body {
-  text-align: center;
-}
-
-.displayName {
-  position: sticky;
-  top: 1em;
-  left: 1em;
-}
-
-.art-image {
-  width: 95%;
-  height: auto;
-}
-
-.art-image-list > li {
-  padding-bottom: 1.5em;
-}
-
-.art-collections {
-  margin-top: 0;
 }

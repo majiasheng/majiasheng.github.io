@@ -1,47 +1,19 @@
-import React, { useEffect } from 'react';
-import { ScreenContext } from "../../../App";
-import "./Post.css";
+/* eslint-disable react/no-danger */
+import React from 'react';
+import PropTypes from 'prop-types';
 
-/**
- * {
- *    title: string,
- *    date: string, // mm-dd-yyyy
- *    content: string,
- *  },
- */
-function Post({ title, date, content }) {
-
-  const { screenItems, dispatch } = React.useContext(ScreenContext);
-
-  useEffect(() => {
-    // enable scroll
-    dispatch({
-      type: "SET_CONTENT_SCROLLABLE",
-      isContentScrollable: true,
-    });
-
-    return () => {
-      // disable scroll
-      dispatch({
-        type: "SET_CONTENT_SCROLLABLE",
-        isContentScrollable: false,
-      });
-    }
-  }, []);
-
+function Post({ content }) {
   return (
-    <div className="Post">
-      <h4 className="post-title">{title.toUpperCase()}</h4>
-      <h4 className="post-date">{date}</h4>
+    <div className="post">
       <div className="post-content">
-        <div dangerouslySetInnerHTML={{ __html: content }} />
-        <div>
-          <br/>
-          - majiasheng
-        </div>
+        {content}
       </div>
     </div>
   );
 }
+
+Post.propTypes = {
+  content: PropTypes.element.isRequired,
+};
 
 export default Post;

@@ -17,10 +17,14 @@ body {
 }
 
 /* anchors */
+/* anchors */
 a {
   text-decoration: none;
 }
-a:link,
-a:visited {
+a:link, a:visited {
   color: inherit;
+}
+a.anchor-hover-black-background-white-text:hover {
+  color: white;
+  background-color: black;
 }
