@@ -3,7 +3,7 @@
 }
 
 .exhibitions {
-  width: 450px;
+  /* width: 450px; */
   display: flex;
   flex-direction: column;
   gap: 12px;
