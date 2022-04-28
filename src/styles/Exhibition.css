@@ -1,0 +1,18 @@
+/* .slide-show-left {
+  position: fixed;
+  left: 0;
+}
+.slide-show-right {
+  position: fixed;
+  right: 12px;
+} */
+.exhibition-body {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  width: 324px;
+  overflow-x: scroll;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
