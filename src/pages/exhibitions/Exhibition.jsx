@@ -21,9 +21,24 @@ import '../../styles/Exhibition.css';
  * }
  */
 function Exhibition({ data }) {
+  const numOfImages = data.showings.length;
   const [indexOfFocusedImage, setIndexOfFocusedImage] = useState(0);
+
   const getImagePathByfileName = (fileName) => `./assets/exhibitions/${data.meta.name.toLowerCase()}/${fileName}`;
+
   const handleImageClick = (indexOfImage) => () => {
+    setIndexOfFocusedImage(indexOfImage);
+  };
+
+  const handleSlideShowLeftClick = () => {
+    if (numOfImages <= 0) return;
+    const indexOfImage = (numOfImages + indexOfFocusedImage - 1) % numOfImages;
+    setIndexOfFocusedImage(indexOfImage);
+  };
+
+  const handleSlideShowRightClick = () => {
+    if (numOfImages <= 0) return;
+    const indexOfImage = (numOfImages + indexOfFocusedImage + 1) % numOfImages;
     setIndexOfFocusedImage(indexOfImage);
   };
 
@@ -34,14 +49,19 @@ function Exhibition({ data }) {
       <div className="exhibition-body">
         <div className="exhibition-image-wrapper">
           <div className="focused-image-wrapper">
-          <img
-            className="focused-image"
-            src={require(`${getImagePathByfileName(data.showings[indexOfFocusedImage].fileName)}`)}
-            alt={data.showings[indexOfFocusedImage].name}
-          />
+            <img
+              className="focused-image"
+              src={require(`${getImagePathByfileName(data.showings[indexOfFocusedImage].fileName)}`)}
+              alt={data.showings[indexOfFocusedImage].name}
+            />
           </div>
           <div className="exhibition-slide-show-wrapper">
-            <div className="slide-show-directional pointer slide-show-left horizontal-flip">➤</div>
+            <div
+              className="slide-show-directional pointer slide-show-left horizontal-flip"
+              onClick={handleSlideShowLeftClick}
+            >
+              ➤
+            </div>
             <div className="exhibition-slide-show">
               {data.showings.map((s, index) => (
                 <div className="exhibition-slide-show-thumbnail-wrapper pointer" key={`s__${s.fileName}`} onClick={handleImageClick(index)}>
@@ -50,14 +70,22 @@ function Exhibition({ data }) {
                     src={require(`${getImagePathByfileName(s.fileName)}`)}
                     alt={s.name}
                   />
-                  {/* <span>{s.name}</span>
-            <span>{s.description}</span> */}
                 </div>
               ))}
             </div>
-            <div className="slide-show-directional slide-show-right">➤</div>
+            <div
+              className="slide-show-directional slide-show-right"
+              onClick={handleSlideShowRightClick}
+            >
+              ➤
+            </div>
           </div>
         </div>
+        <div className="image-info">
+          <span>{data.showings[indexOfFocusedImage].name}</span>
+          <span>{data.showings[indexOfFocusedImage].description}</span>
+        </div>
+
       </div>
     </div>
   );
