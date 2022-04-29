@@ -19,7 +19,6 @@ body {
 }
 
 /* anchors */
-/* anchors */
 a {
   text-decoration: none;
 }
@@ -29,4 +28,13 @@ a:link, a:visited {
 a.anchor-hover-black-background-white-text:hover {
   color: white;
   background-color: black;
+}
+
+/* transformation */
+.horizontal-flip {
+  transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
 }
