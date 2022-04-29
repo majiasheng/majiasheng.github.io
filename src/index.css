@@ -38,3 +38,8 @@ a.anchor-hover-black-background-white-text:hover {
   -o-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
 }
+
+/* curosr*/
+.pointer:hover {
+  cursor: pointer;
+}

@@ -23,6 +23,9 @@ import '../../styles/Exhibition.css';
 function Exhibition({ data }) {
   const [indexOfFocusedImage, setIndexOfFocusedImage] = useState(0);
   const getImagePathByfileName = (fileName) => `./assets/exhibitions/${data.meta.name.toLowerCase()}/${fileName}`;
+  const handleImageClick = (indexOfImage) => () => {
+    setIndexOfFocusedImage(indexOfImage);
+  };
 
   return (
     <div className="exhibition">
@@ -30,18 +33,18 @@ function Exhibition({ data }) {
       <h5 className="exhibition-discription">{data.meta.about}</h5>
       <div className="exhibition-body">
         <div className="exhibition-image-wrapper">
-          {/* <div> */}
+          <div className="focused-image-wrapper">
           <img
-            className="focused-exhibition-piece"
+            className="focused-image"
             src={require(`${getImagePathByfileName(data.showings[indexOfFocusedImage].fileName)}`)}
             alt={data.showings[indexOfFocusedImage].name}
           />
-          {/* </div> */}
+          </div>
           <div className="exhibition-slide-show-wrapper">
-            <div className="slide-show-directional slide-show-left horizontal-flip">➤</div>
+            <div className="slide-show-directional pointer slide-show-left horizontal-flip">➤</div>
             <div className="exhibition-slide-show">
-              {data.showings.map((s) => (
-                <div className="exhibition-slide-show-thumbnail-wrapper" key={`s__${s.fileName}`}>
+              {data.showings.map((s, index) => (
+                <div className="exhibition-slide-show-thumbnail-wrapper pointer" key={`s__${s.fileName}`} onClick={handleImageClick(index)}>
                   <img
                     className="exhibition-slide-show-thumbnail"
                     src={require(`${getImagePathByfileName(s.fileName)}`)}

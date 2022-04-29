@@ -5,7 +5,11 @@
 /* .exhibition-image-wrapper {
 } */
 
-.focused-exhibition-piece {
+.focused-image-wrapper {
+  height: 348px;
+}
+.focused-image {
+  /* max-height: 348px; */
   width: 348px;
   position: relative;
   left: 30px;
@@ -30,9 +34,14 @@
   display: flex;
   flex-direction: row;
   gap: 12px;
-  max-width: 348px;
+  
+  width: 348px;
+  
   overflow-x: scroll;
-  padding: 12px;
+  
+  margin: 24px 12px 12px 12px;
+
+  background-color: #fcfcfcf6;
 }
 
 .exhibition-slide-show-thumbnail-wrapper {
