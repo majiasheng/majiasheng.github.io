@@ -1,9 +1,14 @@
 /* eslint-disable import/no-dynamic-require */
 /* eslint-disable global-require */
 /* eslint-disable react/forbid-prop-types */
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import '../../styles/Exhibition.css';
+
+const SCROLL_WIDTH = 100;
+const ON_HOVER_MOUSE_POINTER_LEFT_CLASS = 'on-hover-mouse-pointer-left';
+const ON_HOVER_MOUSE_POINTER_RIGHT_CLASS = 'on-hover-mouse-pointer-right';
+
 /**
  * data: {
  *   meta: {
@@ -21,25 +26,51 @@ import '../../styles/Exhibition.css';
  * }
  */
 function Exhibition({ data }) {
+  const exhibitionSlideShowRef = useRef(null);
   const numOfImages = data.showings.length;
   const [indexOfFocusedImage, setIndexOfFocusedImage] = useState(0);
+  const [mouseHoverPointerClass, setMouseHoverPointerClass] = useState('');
 
   const getImagePathByfileName = (fileName) => `./assets/exhibitions/${data.meta.name.toLowerCase()}/${fileName}`;
 
-  const handleImageClick = (indexOfImage) => () => {
+  const handleImageThumbnailClick = (indexOfImage) => () => {
     setIndexOfFocusedImage(indexOfImage);
+  };
+
+  const handleMouseMoveCaptureOnImage = (e) => {
+    const start = e.target.x;
+    const end = start + e.target.width;
+    const middle = (start + end) / 2;
+
+    if (middle > e.clientX) {
+      // left
+      setMouseHoverPointerClass(ON_HOVER_MOUSE_POINTER_LEFT_CLASS);
+    } else {
+      // right
+      setMouseHoverPointerClass(ON_HOVER_MOUSE_POINTER_RIGHT_CLASS);
+    }
+  };
+
+  const handleImageClick = () => {
+    if (mouseHoverPointerClass === ON_HOVER_MOUSE_POINTER_LEFT_CLASS) {
+      const indexOfImage = (numOfImages + indexOfFocusedImage - 1) % numOfImages;
+      setIndexOfFocusedImage(indexOfImage);
+    } else {
+      const indexOfImage = (numOfImages + indexOfFocusedImage + 1) % numOfImages;
+      setIndexOfFocusedImage(indexOfImage);
+    }
   };
 
   const handleSlideShowLeftClick = () => {
-    if (numOfImages <= 0) return;
-    const indexOfImage = (numOfImages + indexOfFocusedImage - 1) % numOfImages;
-    setIndexOfFocusedImage(indexOfImage);
+    if (numOfImages <= 1) return;
+
+    exhibitionSlideShowRef.current.scrollLeft -= SCROLL_WIDTH;
   };
 
   const handleSlideShowRightClick = () => {
-    if (numOfImages <= 0) return;
-    const indexOfImage = (numOfImages + indexOfFocusedImage + 1) % numOfImages;
-    setIndexOfFocusedImage(indexOfImage);
+    if (numOfImages <= 1) return;
+
+    exhibitionSlideShowRef.current.scrollLeft += SCROLL_WIDTH;
   };
 
   return (
@@ -50,9 +81,11 @@ function Exhibition({ data }) {
         <div className="exhibition-image-wrapper">
           <div className="focused-image-wrapper">
             <img
-              className="focused-image"
+              className={`focused-image ${mouseHoverPointerClass}`}
               src={require(`${getImagePathByfileName(data.showings[indexOfFocusedImage].fileName)}`)}
               alt={data.showings[indexOfFocusedImage].name}
+              onMouseMoveCapture={handleMouseMoveCaptureOnImage}
+              onClick={handleImageClick}
             />
           </div>
           <div className="exhibition-slide-show-wrapper">
@@ -62,9 +95,9 @@ function Exhibition({ data }) {
             >
               ➤
             </div>
-            <div className="exhibition-slide-show">
+            <div className="exhibition-slide-show" ref={exhibitionSlideShowRef}>
               {data.showings.map((s, index) => (
-                <div className="exhibition-slide-show-thumbnail-wrapper pointer" key={`s__${s.fileName}`} onClick={handleImageClick(index)}>
+                <div className={`exhibition-slide-show-thumbnail-wrapper pointer ${index === indexOfFocusedImage ? 'focused-image-thumbnail' : ''}`} key={`s__${s.fileName}`} onClick={handleImageThumbnailClick(index)}>
                   <img
                     className="exhibition-slide-show-thumbnail"
                     src={require(`${getImagePathByfileName(s.fileName)}`)}
@@ -74,7 +107,7 @@ function Exhibition({ data }) {
               ))}
             </div>
             <div
-              className="slide-show-directional slide-show-right"
+              className="slide-show-directional pointer slide-show-right"
               onClick={handleSlideShowRightClick}
             >
               ➤

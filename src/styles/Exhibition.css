@@ -39,6 +39,7 @@
   gap: 12px;
   width: 348px;
   overflow-x: scroll;
+  scroll-behavior: smooth;
   margin: 24px 12px 12px 12px;
   background-color: #fcfcfcf6;
 }
@@ -55,11 +56,15 @@
 }
 
 .exhibition-slide-show-thumbnail-wrapper {
-  border: 6px solid rgb(217, 216, 219);
+  border: 3px solid rgb(217, 216, 219);
   height: 100px;
 }
 
 .exhibition-slide-show-thumbnail {
   height: 100px;
   box-shadow: 2px 1px 2px #888888;
+}
+
+.focused-image-thumbnail {
+  border-color: rgb(87, 87, 87) !important;
 }

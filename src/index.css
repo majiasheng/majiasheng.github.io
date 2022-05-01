@@ -43,3 +43,14 @@ a.anchor-hover-black-background-white-text:hover {
 .pointer:hover {
   cursor: pointer;
 }
+.on-hover-mouse-pointer-left:hover {
+  cursor: w-resize;
+}
+.on-hover-mouse-pointer-right:hover {
+  cursor: e-resize;
+}
+
+/* visibility */
+.invisible {
+  visibility: hidden;
+}
