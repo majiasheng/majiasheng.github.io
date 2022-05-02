@@ -57,12 +57,13 @@
 
 .exhibition-slide-show-thumbnail-wrapper {
   border: 3px solid rgb(217, 216, 219);
+  border-radius: 2px;
   height: 100px;
 }
 
 .exhibition-slide-show-thumbnail {
   height: 100px;
-  box-shadow: 2px 1px 2px #888888;
+  /* box-shadow: 2px 1px 2px #888888; */
 }
 
 .focused-image-thumbnail {

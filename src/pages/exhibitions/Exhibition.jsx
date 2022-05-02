@@ -92,12 +92,20 @@ function Exhibition({ data }) {
             <div
               className="slide-show-directional pointer slide-show-left horizontal-flip"
               onClick={handleSlideShowLeftClick}
+              role="button"
+              tabIndex={0}
             >
               ➤
             </div>
             <div className="exhibition-slide-show" ref={exhibitionSlideShowRef}>
               {data.showings.map((s, index) => (
-                <div className={`exhibition-slide-show-thumbnail-wrapper pointer ${index === indexOfFocusedImage ? 'focused-image-thumbnail' : ''}`} key={`s__${s.fileName}`} onClick={handleImageThumbnailClick(index)}>
+                <div
+                  className={`exhibition-slide-show-thumbnail-wrapper pointer ${index === indexOfFocusedImage ? 'focused-image-thumbnail' : ''}`}
+                  key={`s__${s.fileName}`}
+                  onClick={handleImageThumbnailClick(index)}
+                  role="menuitem"
+                  tabIndex={0}
+                >
                   <img
                     className="exhibition-slide-show-thumbnail"
                     src={require(`${getImagePathByfileName(s.fileName)}`)}
@@ -109,6 +117,8 @@ function Exhibition({ data }) {
             <div
               className="slide-show-directional pointer slide-show-right"
               onClick={handleSlideShowRightClick}
+              role="button"
+              tabIndex={0}
             >
               ➤
             </div>
