@@ -11,11 +11,9 @@ const createPath = (name) => `/posts/${name}`.toLocaleLowerCase();
 function Posts() {
   return (
     <div className="posts">
-      {/* <h3>Art is whatever you make of it </h3> */}
-
       <Switch>
         <Route exact path="/posts">
-          <ol>
+          <ol className="post-list">
             {
             posts.map((p) => (
               <li key={`post-link-${p.pathName}`}>
@@ -32,9 +30,6 @@ function Posts() {
           </Route>
         ))}
       </Switch>
-      {/* <hr />
-      <h4>Volumes</h4>
-      <a href={twbm} target="_blank" rel="noreferrer">• TWBM Vol.1</a> */}
     </div>
   );
 }
