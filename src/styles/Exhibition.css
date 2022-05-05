@@ -1,11 +1,6 @@
 .exhibition-discription {
   /* padding-left: 30px; */
   margin-bottom: 2em;
-  margin-left: 1em;
-}
-
-.exhibition-header .exhibition-name-wrapper {
-  margin-bottom: 1em;
 }
 
 .exhibition-header .exhibition-name {
@@ -13,6 +8,8 @@
   padding-right: 2px;
   background-color: black;
   color: white;
+  margin-bottom: 1em;
+  display: block;
   width: fit-content;
 }
 

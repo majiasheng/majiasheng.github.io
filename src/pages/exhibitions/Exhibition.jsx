@@ -81,10 +81,12 @@ function Exhibition({ data }) {
   return (
     <div className="exhibition">
       <div className="exhibition-header">
-        <div className="exhibition-name-wrapper">
-          <Link to="/exhibitions" title="back">◀︎ </Link>
-          <span className="exhibition-name">{data.meta.name}</span>
-        </div>
+        {/* <div className="back-button">
+          <Link to="/exhibitions" title="back">
+            {'<- '}
+          </Link>
+        </div> */}
+        <div className="exhibition-name">{data.meta.name}</div>
         <div className="exhibition-discription">{data.meta.about}</div>
       </div>
       <div className="exhibition-body">

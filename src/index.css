@@ -60,3 +60,8 @@ a.anchor-hover-black-background-white-text:hover {
 .invisible {
   visibility: hidden;
 }
+
+/*  */
+.back-button {
+  margin-bottom: 1em;
+}
