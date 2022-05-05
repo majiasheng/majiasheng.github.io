@@ -13,8 +13,6 @@ const createPath = (name) => `/exhibitions/${name}`.toLocaleLowerCase();
 function Exhibitions() {
   return (
     <div className="exhibitions">
-      {/* <h3>Art is whatever you make of it </h3> */}
-
       <Switch>
         <Route exact path="/exhibitions">
           {

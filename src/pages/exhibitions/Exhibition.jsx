@@ -73,10 +73,16 @@ function Exhibition({ data }) {
     exhibitionSlideShowRef.current.scrollLeft += SCROLL_WIDTH;
   };
 
+  const handleKeyDownCapture = (e) => {
+    if (e.key === ' ') { e.target.click(); }
+  };
+
   return (
     <div className="exhibition">
-      <h4 className="exhibition-name">{data.meta.name}</h4>
-      <h5 className="exhibition-discription">{data.meta.about}</h5>
+      <div className="exhibition-header">
+        <div className="exhibition-name">{data.meta.name}</div>
+        <div className="exhibition-discription">{data.meta.about}</div>
+      </div>
       <div className="exhibition-body">
         <div className="exhibition-image-wrapper">
           <div className="focused-image-wrapper">
@@ -84,7 +90,7 @@ function Exhibition({ data }) {
               className={`focused-image ${mouseHoverPointerClass}`}
               src={require(`${getImagePathByfileName(data.showings[indexOfFocusedImage].fileName)}`)}
               alt={data.showings[indexOfFocusedImage].name}
-              onMouseMoveCapture={handleMouseMoveCaptureOnImage}
+              onMouseMove={handleMouseMoveCaptureOnImage}
               onClick={handleImageClick}
             />
           </div>
@@ -94,6 +100,7 @@ function Exhibition({ data }) {
               onClick={handleSlideShowLeftClick}
               role="button"
               tabIndex={0}
+              onKeyDown={handleKeyDownCapture}
             >
               ➤
             </div>
@@ -105,6 +112,7 @@ function Exhibition({ data }) {
                   onClick={handleImageThumbnailClick(index)}
                   role="menuitem"
                   tabIndex={0}
+                  onKeyDown={handleKeyDownCapture}
                 >
                   <img
                     className="exhibition-slide-show-thumbnail"
@@ -119,6 +127,7 @@ function Exhibition({ data }) {
               onClick={handleSlideShowRightClick}
               role="button"
               tabIndex={0}
+              onKeyDown={handleKeyDownCapture}
             >
               ➤
             </div>

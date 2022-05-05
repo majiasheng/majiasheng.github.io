@@ -16,7 +16,10 @@
   position: relative;
 }
 
-h4.exhibition-name {
+.exhibition-name {
   margin-top: 0;
   text-transform: uppercase;
+  font-weight: 200;
+  /* color: white; */
+  /* background-color: black; */
 }

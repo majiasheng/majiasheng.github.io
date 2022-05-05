@@ -1,7 +1,23 @@
+.exhibition-discription {
+  /* padding-left: 30px; */
+  margin-bottom: 2em;
+}
+
+.exhibition-header .exhibition-name {
+  padding-left: 2px;
+  padding-right: 2px;
+  background-color: black;
+  color: white;
+  margin-bottom: 1em;
+  display: block;
+  width: fit-content;
+}
+
 .exhibition-body {
   width: 100%;
   display: flex;
   flex-direction: row;
+  gap: 12px;
 }
 
 /* .exhibition-image-wrapper {
@@ -15,7 +31,7 @@
   /* max-height: 348px; */
   width: 348px;
   position: relative;
-  left: 30px;
+  /* left: 30px; */
 }
 
 .exhibition-slide-show-wrapper {
@@ -37,7 +53,7 @@
   display: flex;
   flex-direction: row;
   gap: 12px;
-  width: 348px;
+  width: 279px;
   overflow-x: scroll;
   scroll-behavior: smooth;
   margin: 24px 12px 12px 12px;
@@ -58,14 +74,15 @@
 .exhibition-slide-show-thumbnail-wrapper {
   border: 3px solid rgb(217, 216, 219);
   border-radius: 2px;
-  height: 100px;
+  height: 75px;
 }
 
 .exhibition-slide-show-thumbnail {
-  height: 100px;
+  height: 75px;
   /* box-shadow: 2px 1px 2px #888888; */
 }
 
 .focused-image-thumbnail {
-  border-color: rgb(87, 87, 87) !important;
+  /* border-color: rgb(247, 197, 197) !important; */
+  border-bottom-color: rgb(241, 190, 190)  !important;
 }

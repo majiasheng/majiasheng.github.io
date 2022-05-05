@@ -5,7 +5,7 @@ import codeCoverageVsTestCoverage from './CodeCoverageVsTestCoverage';
 import whatIsApi from './WhatIsApi';
 import overviewOfAppDevelopment from './OverviewOfAppDevelopment';
 import whatIsLinting from './WhatIsLinting';
-import onMadeInChina from './OnMadeInChina';
+// import onMadeInChina from './OnMadeInChina';
 
 export default [
   beginningOfPosts,
@@ -15,5 +15,5 @@ export default [
   whatIsApi,
   overviewOfAppDevelopment,
   whatIsLinting,
-  onMadeInChina,
+  // onMadeInChina,
 ];
