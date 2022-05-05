@@ -86,3 +86,16 @@
   /* border-color: rgb(247, 197, 197) !important; */
   border-bottom-color: rgb(241, 190, 190)  !important;
 }
+
+.image-info {
+  text-transform: lowercase;
+}
+
+.image-info .image-name {
+  display: block;
+  width: fit-content;
+}
+
+.image-info .image-name hr {
+  height: 1px;
+}

@@ -134,8 +134,11 @@ function Exhibition({ data }) {
           </div>
         </div>
         <div className="image-info">
-          <span>{data.showings[indexOfFocusedImage].name}</span>
-          <span>{data.showings[indexOfFocusedImage].description}</span>
+          <div className="image-name">
+            {data.showings[indexOfFocusedImage].name}
+            <hr />
+          </div>
+          <div>{data.showings[indexOfFocusedImage].description}</div>
         </div>
 
       </div>

@@ -7,7 +7,7 @@ const minimal = {
     {
       fileName: 'heavily-minimal.jpeg',
       name: 'Heavily Minimal',
-      description: 'minimal #1',
+      description: 'Receipt of the purchase of a cast iron pan in a kitchenware wholesale, striking a stark contrast to the stuffed and chaotic store',
       date: '2017-12-01',
     },
   ],

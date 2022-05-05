@@ -6,14 +6,14 @@ const precarious = {
   showings: [
     {
       fileName: 'precarious1.jpg',
-      name: '',
-      description: 'precarious #1',
+      name: 'precarious #1',
+      description: "sterling silver Ganesha statue sitting on the rocks, on top of Hemingway's A Moveable Feast",
       date: '2017-12-01',
     },
     {
       fileName: 'precarious2.jpg',
-      name: '',
-      description: 'precarious #2',
+      name: 'precarious #2',
+      description: 'tungsten carbide ring on the edge of a tile',
       date: '2021-01-11',
     },
   ],

@@ -7,13 +7,13 @@ const pedestal = {
     {
       fileName: 'pedestal1.jpg',
       name: 'Cherry Wood columns',
-      description: 'pedestal #1',
+      description: '',
       date: '2020-04-01',
     },
     {
       fileName: 'pedestal2.jpg',
       name: 'Lego on Tile',
-      description: 'pedestal #2',
+      description: '',
       date: '2021-01-17',
     },
   ],
