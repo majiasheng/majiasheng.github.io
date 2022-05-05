@@ -37,3 +37,10 @@ ul#nav-items li {
   width: 323px;
   z-index: 1;
 } */
+
+.current-focused-path {
+  /* background-color: aqua; */
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: antiquewhite;
+}

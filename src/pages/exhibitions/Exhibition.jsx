@@ -2,6 +2,7 @@
 /* eslint-disable global-require */
 /* eslint-disable react/forbid-prop-types */
 import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import '../../styles/Exhibition.css';
 
@@ -80,7 +81,10 @@ function Exhibition({ data }) {
   return (
     <div className="exhibition">
       <div className="exhibition-header">
-        <div className="exhibition-name">{data.meta.name}</div>
+        <div className="exhibition-name-wrapper">
+          <Link to="/exhibitions" title="back">◀︎ </Link>
+          <span className="exhibition-name">{data.meta.name}</span>
+        </div>
         <div className="exhibition-discription">{data.meta.about}</div>
       </div>
       <div className="exhibition-body">

@@ -31,7 +31,7 @@ const geometric = {
     {
       fileName: 'top-of-the-rock.jpg',
       name: 'scratchy',
-      description: 'oblique snippet from the top of the rock',
+      description: 'snippet of the top of the rock',
       date: '2021-05-15',
     },
     {

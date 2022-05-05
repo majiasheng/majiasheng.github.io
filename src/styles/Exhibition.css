@@ -1,6 +1,11 @@
 .exhibition-discription {
   /* padding-left: 30px; */
   margin-bottom: 2em;
+  margin-left: 1em;
+}
+
+.exhibition-header .exhibition-name-wrapper {
+  margin-bottom: 1em;
 }
 
 .exhibition-header .exhibition-name {
@@ -8,8 +13,6 @@
   padding-right: 2px;
   background-color: black;
   color: white;
-  margin-bottom: 1em;
-  display: block;
   width: fit-content;
 }
 
@@ -84,7 +87,8 @@
 
 .focused-image-thumbnail {
   /* border-color: rgb(247, 197, 197) !important; */
-  border-bottom-color: rgb(241, 190, 190)  !important;
+  /* border-bottom-color: rgb(241, 190, 190) !important; */
+  border-bottom-color: antiquewhite !important;
 }
 
 .image-info {
