@@ -1,9 +1,15 @@
-export const routes = [
-    {path: '/', name: 'Home'},
-    {path: '/about', name: 'About'},
-    {path: '/art', name: 'Art'},
-    // {path: '/work', name: 'Work'},
-    {path: '/posts', name: 'Posts'},
-];
+import {
+  Home,
+  About,
+  Exhibitions,
+  Posts,
+//   Work,
+} from './pages';
 
-export const NUMBER_OF_ROUTES = routes.length;
+export default {
+  home: { path: '/', name: 'Home', component: Home },
+  about: { path: '/about', name: 'About', component: About },
+  exhibitions: { path: '/exhibitions', name: 'Exhibitions', component: Exhibitions },
+  posts: { path: '/posts', name: 'Posts', component: Posts },
+  // work: {path: '/work', name: 'Work', component: Work},
+};

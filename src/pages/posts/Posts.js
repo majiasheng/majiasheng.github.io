@@ -1,96 +1,50 @@
-import React, { useEffect } from "react";
-import { Switch, Route, Link, withRouter } from "react-router-dom";
-import * as posts from "./_posts";
-import { SELECTED_ITEM } from "../includes/cssClasses";
-import Post from "./Post";
-import { ScreenContext } from "../../App";
+import React from 'react';
+import {
+  Switch, Route, Link,
+} from 'react-router-dom';
+import Post from './Post';
+import posts from './post-data';
+import '../../styles/Posts.css';
 
-// TODO: add keyword prop
-// TODO: add search
-function Posts(props) {
-  const { screenItems, dispatch } = React.useContext(ScreenContext);
+const createPath = (name) => `/posts/${name}`.toLocaleLowerCase();
 
-  /* reason for passing in index is to create closure */
-  const handleMouseSelectItem = (index) => {
-    return () =>
-      dispatch({
-        type: "MOUSE_SELECT_ITEM",
-        index,
-      });
-  };
-
-  useEffect(() => {
-    dispatch({
-      type: "SET_NUM_OF_SELECTABLE_ITEMS",
-      numOfSelectableItems: Object.entries(posts).length,
-    });
-
-    dispatch({
-      type: "SET_ROUTES_OF_SELECTABLE_ITEMS",
-      routesOfSelectableItems: Object.keys(posts).map(
-        (key) => `${props.match.path}/${key}`
-      ),
-    });
-    return () => {
-      dispatch({
-        type: "SET_NUM_OF_SELECTABLE_ITEMS",
-        numOfSelectableItems: 0,
-      });
-      dispatch({
-        type: "SET_ROUTES_OF_SELECTABLE_ITEMS",
-        routesOfSelectableItems: [],
-      });
-      dispatch({
-        type: "SET_INDEX_OF_SELECTABLE_ITEM",
-        indexOfSelectableItem: 0,
-      });
-    };
-  }, []);
-
-  let { path } = props.match; /* `match` is from `withRouter` */
-  let linksJSX = [];
-  let routesJSX = [];
-
-  let index = 0;
-  Object.entries(posts).map(([key, value]) => {
-    linksJSX.push(
-      <li
-        key={`link_${key}`}
-        className={`${
-          screenItems.indexOfSelectableItem === index ? SELECTED_ITEM : ""
-        }`}
-        onMouseEnter={handleMouseSelectItem(index)}
-      >
-        <Link to={`${path}/${key}`}>• {value.title.toLocaleUpperCase()}</Link>
-      </li>
-    );
-    routesJSX.push(
-      <Route path={`${path}/${key}`} key={`route_${key}`}>
-        <Post title={value.title} date={value.date} content={value.content} />
-      </Route>
-    );
-    index++;
-  });
-
-  routesJSX.push(
-    <Route path={`${path}/*`} key={`route_404`}>
-      404
-    </Route>
-  );
-
+function Posts() {
   return (
     <div className="posts">
-      <h3>Posts <a href="/posts/html/index.html" title="Plain View">📄</a></h3>
-      <hr />
       <Switch>
-        <Route exact path={path}>
-          <ul className="inline-block posts-list">{linksJSX}</ul>
+        <Route exact path="/posts">
+          <table>
+            <tbody>
+              {
+              posts.sort(
+                (a, b) => new Date(b.date) - new Date(a.date),
+              ).map((p) => (
+                <tr className="post-link-wrapper" key={`post-link-${p.pathName}`}>
+                  <td className="post-date">
+                    {p.date}
+                  </td>
+                  <td>|-</td>
+                  <td>
+                    <Link className="post-link anchor-hover-black-background-white-text" to={createPath(p.pathName)}>{p.title}</Link>
+                  </td>
+                </tr>
+
+              ))
+            }
+            </tbody>
+          </table>
         </Route>
 
-        {routesJSX}
+        {
+          posts.map((p) => (
+            <Route exact path={createPath(p.pathName)} key={`post-route-${p.pathName}`}>
+              <Post content={<p.content />} />
+            </Route>
+          ))
+        }
       </Switch>
     </div>
   );
 }
 
-export default withRouter(Posts);
+export default Posts;

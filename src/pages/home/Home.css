@@ -3,6 +3,8 @@
 }
 
 .typewriter #hello-world {
+  font-family: PressStart2P;
+
   /* Ensures the content is not revealed until the animation */
   overflow: hidden; 
   /* The typwriter cursor */

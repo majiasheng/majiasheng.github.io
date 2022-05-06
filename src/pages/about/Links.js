@@ -1,7 +1,7 @@
-import React from "react";
-import githubIcon from "../../images/icons/GitHub-Mark-32px.png";
-import linkedinIcon from "../../images/icons/LI-In-Bug.png";
-import MailIcon from "../../images/icons/Email-icon.png";
+import React from 'react';
+import githubIcon from '../../images/icons/GitHub-Mark-32px.png';
+import linkedinIcon from '../../images/icons/LI-In-Bug.png';
+import MailIcon from '../../images/icons/Email-icon.png';
 
 function Links() {
   return (
@@ -16,7 +16,7 @@ function Links() {
             rel="noopener noreferrer"
             className="anchorHoverNoEffect"
           >
-            <img alt="email" src={MailIcon} className="icon-height-16px"></img>
+            <img alt="email" src={MailIcon} className="icon-height-16px" />
           </a>
         </li>
         <li>
@@ -30,7 +30,7 @@ function Links() {
               alt="github"
               src={githubIcon}
               className="icon-height-16px"
-            ></img>
+            />
           </a>
         </li>
         <li>
@@ -44,7 +44,7 @@ function Links() {
               alt="linkedin"
               src={linkedinIcon}
               className="icon-height-16px"
-            ></img>
+            />
           </a>
         </li>
       </ul>
