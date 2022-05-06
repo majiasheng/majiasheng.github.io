@@ -1,7 +1,7 @@
 const geometric = {
   meta: {
     name: 'geometric',
-    about: 'Featuring geometric objects',
+    about: '',
   },
   showings: [
     {
@@ -30,13 +30,13 @@ const geometric = {
     },
     {
       fileName: 'top-of-the-rock.jpg',
-      name: 'scratchy',
-      description: 'snippet of the top of the rock',
+      name: 'on the top of the rock',
+      description: '',
       date: '2021-05-15',
     },
     {
       fileName: '432-park-ave.jpg',
-      name: 'Matchstick',
+      name: '432 Park Ave',
       description: "1%'s height",
       date: '2021-05-15',
     },

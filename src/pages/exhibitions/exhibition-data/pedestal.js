@@ -1,7 +1,7 @@
 const pedestal = {
   meta: {
     name: 'pedestal',
-    about: 'the less focused pedestals deserve appreciations',
+    about: 'Shifting the focus from main subject to the supporting pedestals',
   },
   showings: [
     {

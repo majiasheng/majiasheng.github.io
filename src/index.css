@@ -14,7 +14,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 11px;
   font-weight: 100;
-  width: 595px;
+  max-width: 595px;
   color: #555454;
 
   -webkit-user-select: none; /* Safari */
@@ -64,4 +64,8 @@ a.anchor-hover-black-background-white-text:hover {
 /*  */
 .back-button {
   margin-bottom: 1em;
+}
+
+hr {
+  height: 1px;
 }

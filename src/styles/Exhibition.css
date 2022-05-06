@@ -89,14 +89,11 @@
 }
 
 .image-info {
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
 }
 
 .image-info .image-name {
   display: block;
   width: fit-content;
-}
-
-.image-info .image-name hr {
-  height: 1px;
+  text-transform: capitalize;
 }

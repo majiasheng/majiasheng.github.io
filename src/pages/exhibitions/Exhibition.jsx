@@ -143,7 +143,9 @@ function Exhibition({ data }) {
             {data.showings[indexOfFocusedImage].name}
             <hr />
           </div>
-          <div>{data.showings[indexOfFocusedImage].description}</div>
+          <div className="image-description">
+            {data.showings[indexOfFocusedImage].description}
+          </div>
         </div>
 
       </div>

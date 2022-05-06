@@ -13,7 +13,6 @@ function Posts() {
     <div className="posts">
       <Switch>
         <Route exact path="/posts">
-          {/* <ul className="post-list"> */}
           <table>
             <tbody>
               {
@@ -24,7 +23,7 @@ function Posts() {
                   <td className="post-date">
                     {p.date}
                   </td>
-                  <td className="date-post-title-separator" />
+                  <td>|-</td>
                   <td>
                     <Link className="post-link anchor-hover-black-background-white-text" to={createPath(p.pathName)}>{p.title}</Link>
                   </td>
@@ -32,7 +31,6 @@ function Posts() {
 
               ))
             }
-              {/* </ul> */}
             </tbody>
           </table>
         </Route>
