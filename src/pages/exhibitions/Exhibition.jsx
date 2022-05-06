@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 /* eslint-disable import/no-dynamic-require */
 /* eslint-disable global-require */
 /* eslint-disable react/forbid-prop-types */
@@ -143,9 +144,7 @@ function Exhibition({ data }) {
             {data.showings[indexOfFocusedImage].name}
             <hr />
           </div>
-          <div className="image-description">
-            {data.showings[indexOfFocusedImage].description}
-          </div>
+          <div className="image-description" dangerouslySetInnerHTML={{ __html: data.showings[indexOfFocusedImage].description }} />
         </div>
 
       </div>

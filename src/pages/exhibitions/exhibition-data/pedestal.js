@@ -1,7 +1,7 @@
 const pedestal = {
   meta: {
     name: 'pedestal',
-    about: 'Shifting the focus from main subject to the supporting pedestals',
+    about: 'Shifting focus from the main subject to the supporting pedestals',
   },
   showings: [
     {
