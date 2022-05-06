@@ -2,7 +2,6 @@
 /* eslint-disable global-require */
 /* eslint-disable react/forbid-prop-types */
 import React, { useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import '../../styles/Exhibition.css';
 

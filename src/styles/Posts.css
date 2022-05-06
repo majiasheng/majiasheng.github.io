@@ -1,9 +1,14 @@
 .post-link {
   text-transform: uppercase;
+  padding: 0 1px 0 1px;
 }
+
 .post-content {
   line-height: 13pt;
 }
-.post-list {
-  padding-left: 1.8em;
+
+td.date-post-title-separator {
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
 }
