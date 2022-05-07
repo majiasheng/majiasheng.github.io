@@ -5,12 +5,10 @@ function NotFound() {
   return (
     <div>
       <div>
-        You either got here by refreshing your page or your url is not valid
+        You got here because you either refreshed your page or your url is not valid
       </div>
       <h1 className="the-scream">
-        No content here, go
-        {' '}
-        <a href="/">back</a>
+        <a href="/">🏡 🏃💨</a>
       </h1>
       <br />
       <img src="/the-scream.jpeg" alt="404" />

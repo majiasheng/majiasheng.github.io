@@ -19,7 +19,10 @@ function App() {
             {Object.values(routes).map((r) => (
               <Route exact={r.path === '/'} path={r.path} component={r.component} key={r.name} />
             ))}
-            <Route path={['/404', '*']}>
+            <Route exact path="/not-found">
+              <NotFound />
+            </Route>
+            <Route path="*">
               <NotFound />
             </Route>
           </Switch>
