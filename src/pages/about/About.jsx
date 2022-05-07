@@ -12,14 +12,22 @@ function About() {
           This is JS
         </div>
         <div>
-          I solve problems and
+          I solve problems
         </div>
         <div>
-          I apprecitate beauty in things
+          I apprecitate beauty in things and
+        </div>
+        <div>
+          I hope everyone do too
         </div>
       </div>
       <div>This site is a repository for my works</div>
-      <div>Enjoy</div>
+      <div>
+        Enjoy and
+      </div>
+      <div>
+        hope y&apos;all get inspired
+      </div>
       <br />
       <hr />
       <div>
