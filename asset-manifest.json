@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.965027d0.css",
-    "main.js": "/static/js/main.9fe99a14.js",
+    "main.js": "/static/js/main.b7f6322b.js",
     "static/media/twbm-vol1-ed1.pdf": "/static/media/twbm-vol1-ed1.9a6be3461f50ca8205c3.pdf",
     "static/media/top-of-the-rock.jpg": "/static/media/top-of-the-rock.f157660203d973bcd068.jpg",
     "static/media/heavily-minimal.jpeg": "/static/media/heavily-minimal.1116264444cda59825b6.jpeg",
@@ -17,10 +17,10 @@
     "static/media/precarious1.jpg": "/static/media/precarious1.7f20b0f805633a77be7b.jpg",
     "index.html": "/index.html",
     "main.965027d0.css.map": "/static/css/main.965027d0.css.map",
-    "main.9fe99a14.js.map": "/static/js/main.9fe99a14.js.map"
+    "main.b7f6322b.js.map": "/static/js/main.b7f6322b.js.map"
   },
   "entrypoints": [
     "static/css/main.965027d0.css",
-    "static/js/main.9fe99a14.js"
+    "static/js/main.b7f6322b.js"
   ]
 }
