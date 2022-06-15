@@ -18,7 +18,7 @@ function About() {
           I apprecitate beauty in things and
         </div>
         <div>
-          I hope everyone do too
+          I hope everyone does too
         </div>
       </div>
       <div>This site is a repository for my works</div>
