@@ -3,6 +3,7 @@
   "rules": {
     "import/prefer-default-export": "warn",
     "no-trailing-spaces": "warn",
-    "react/jsx-filename-extension": "off"
+    "react/jsx-filename-extension": "off",
+    "max-len":["off", { "code": 100 }]
   }
 }

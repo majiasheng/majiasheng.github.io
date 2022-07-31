@@ -6,6 +6,7 @@ import whatIsApi from './WhatIsApi';
 import overviewOfAppDevelopment from './OverviewOfAppDevelopment';
 import whatIsLinting from './WhatIsLinting';
 // import onMadeInChina from './OnMadeInChina';
+import scalingUpVsScalingOut from './ScalingUpVsScalingOut';
 
 export default [
   beginningOfPosts,
@@ -16,4 +17,5 @@ export default [
   overviewOfAppDevelopment,
   whatIsLinting,
   // onMadeInChina,
+  scalingUpVsScalingOut,
 ];
