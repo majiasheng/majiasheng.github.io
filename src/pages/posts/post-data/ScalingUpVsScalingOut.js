@@ -12,11 +12,11 @@ function ScalingUpVsScalingOut() {
 
       <div>
         <p>
-          Scaling up: Increasing power of resources (more RAM/better CPU/GPU) of the current server(s).
+          Scaling up: Increasing the power of resources (more RAM, more CPU core, etc.) of the current server(s).
         </p>
 
         <p>
-          Scaling out: Increasing number of servers to handle requests
+          Scaling out: Increasing the number of servers.
         </p>
       </div>
     </div>
