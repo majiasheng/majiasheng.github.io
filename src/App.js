@@ -6,14 +6,12 @@ import './styles/App.css';
 import NotFound from './pages/404';
 import NavigationBar from './components/NavigationBar';
 
-const gaTrackingID = 'G-QE1E9PSV7H';
-ReactGA.initialize(gaTrackingID);
-
 function App() {
   useEffect(() => {
+    ReactGA.initialize('G-QE1E9PSV7H');
     // eslint-disable-next-line no-undef
     ReactGA.pageview(window.location.pathname + window.location.search);
-  });
+  }, []);
 
   return (
     <div className="App">
