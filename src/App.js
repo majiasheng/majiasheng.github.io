@@ -1,11 +1,20 @@
-import React from 'react';
+import ReactGA from 'react-ga';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import routes from './routes';
 import './styles/App.css';
 import NotFound from './pages/404';
 import NavigationBar from './components/NavigationBar';
 
+const gaTrackingID = 'G-QE1E9PSV7H';
+ReactGA.initialize(gaTrackingID);
+
 function App() {
+  useEffect(() => {
+    // eslint-disable-next-line no-undef
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  });
+
   return (
     <div className="App">
 
