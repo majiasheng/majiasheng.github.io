@@ -1,4 +1,4 @@
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import routes from './routes';
@@ -8,9 +8,8 @@ import NavigationBar from './components/NavigationBar';
 
 function App() {
   useEffect(() => {
-    ReactGA.initialize('G-QE1E9PSV7H');
     // eslint-disable-next-line no-undef
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.send(window.location.pathname + window.location.search);
   }, []);
 
   return (

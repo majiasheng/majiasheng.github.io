@@ -1,4 +1,5 @@
-import React from 'react';
+import ReactGA from 'react-ga4';
+import React, { useEffect } from 'react';
 import {
   Switch, Route, Link,
 } from 'react-router-dom';
@@ -9,6 +10,10 @@ import '../../styles/Posts.css';
 const createPath = (name) => `/posts/${name}`.toLocaleLowerCase();
 
 function Posts() {
+  useEffect(() => {
+    // eslint-disable-next-line no-undef
+    ReactGA.send(window.location.pathname + window.location.search);
+  }, []);
   return (
     <div className="posts">
       <Switch>

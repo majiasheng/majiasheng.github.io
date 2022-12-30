@@ -1,4 +1,5 @@
-import React from 'react';
+import ReactGA from 'react-ga4';
+import React, { useEffect } from 'react';
 import {
   Switch, Route, Link,
 } from 'react-router-dom';
@@ -6,11 +7,14 @@ import exhibitions from './exhibition-data';
 import Exhibition from './Exhibition';
 import ExhibitionThumbnail from './ExhibitionThumbnail';
 import '../../styles/Exhibitions.css';
-// import twbm from './assets/twbm-vol1-ed1.pdf';
 
 const createPath = (name) => `/exhibitions/${name}`.toLocaleLowerCase();
 
 function Exhibitions() {
+  useEffect(() => {
+    // eslint-disable-next-line no-undef
+    ReactGA.send(window.location.pathname + window.location.search);
+  }, []);
   return (
     <div className="exhibitions">
       <Switch>

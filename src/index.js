@@ -1,9 +1,14 @@
 /* eslint-disable no-undef */
+import ReactGA from 'react-ga4';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+ReactGA.initialize('G-QE1E9PSV7H', {
+  // debug: true,
+});
 
 ReactDOM.render(
   <React.StrictMode>
