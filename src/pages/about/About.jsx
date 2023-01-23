@@ -37,7 +37,7 @@ function About() {
       <hr />
       <div>
         <ul className="inline-list">
-          <li>
+          {/* <li>
             <a
               className="anchor-hover-black-background-white-text"
               href="https://majsdev.github.io"
@@ -46,7 +46,7 @@ function About() {
             >
               v1
             </a>
-          </li>
+          </li> */}
           <li>
             <a
               href="https://github.com/majiasheng/"
