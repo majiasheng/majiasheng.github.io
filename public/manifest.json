@@ -3,8 +3,8 @@
   "name": "majiasheng's personal website",
   "icons": [
     {
-      "src": "ma.png",
-      "sizes": "140×140",
+      "src": "ma-flipped-transparent.png",
+      "sizes": "64x64",
       "type": "image/x-icon"
     }
   ],
